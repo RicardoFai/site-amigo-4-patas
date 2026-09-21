@@ -1,0 +1,143 @@
+@charset "UTF-8";
+
+:root {
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: 'Passion One', cursive;
+    --fonte3: 'Work Sans', sans-serif;
+    
+    --cor-principal: #5B8C5A;   /* Verde Salvia */
+    --cor-secundaria: #F4A261;  /* Mostarda / Laranja */
+    --cor-fundo: #EAE8E1;       /* Bege suave */
+    --cor-texto: #2D3748;       /* Grafite escuro */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ROLAGEM SUAVE AO CLICAR NOS LINKS DO MENU */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--cor-fundo);
+    font-family: var(--fonte1);
+    color: var(--cor-texto);
+}
+
+/* CABEÇALHO */
+header {
+    background-color: var(--cor-principal);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.logo-header {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    padding: 4px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+}
+
+/* MENU DE NAVEGAÇÃO */
+nav {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav a {
+    color: var(--cor-texto);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background-color: #f0f4f1;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: var(--cor-secundaria);
+    color: #ffffff;
+}
+
+/* SEÇÕES DE TEXTO NORMAL */
+section.normal {
+    background-color: #ffffff;
+    color: var(--cor-texto);
+    padding: 10vh 30px;
+    line-height: 1.8em;
+}
+
+section.normal h2 {
+    color: var(--cor-principal);
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+section.normal p {
+    max-width: 800px;
+    margin: 0 auto 15px auto;
+    font-size: 1.1em;
+}
+
+/* SEÇÃO COM FOTO FIXA NO FUNDO (EFEITO PARALLAX) */
+section.imagem {
+    height: 60vh;                             /* Altura da faixa com foto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.6);
+    
+    /* Efeito de fixar a imagem */
+    background-attachment: fixed;             /* A MÁGICA: A foto trava no fundo enquanto o site rola */
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* FOTO DO SEU CACHORRO APLICADA NAS SEÇÕES */
+section#img-mascote {
+    background-image: url('../imagens/fotoong1.png');
+}
+
+section#img-frase {
+    background-image: url('../imagens/fotoong1.png');
+}
+
+/* CAIXA DE TEXTO POR CIMA DA FOTO */
+section.imagem p {
+    display: inline-block;
+    padding: 15px 25px;
+    background-color: rgba(0, 0, 0, 0.65);    /* Fundo escuro transparente para o texto ficar legível */
+    border-radius: 10px;
+    font-size: 1.3em;
+    max-width: 600px;
+    backdrop-filter: blur(2px);
+}
+
+/* RODAPÉ */
+footer {
+    background-color: var(--cor-texto);
+    color: white;
+    text-align: center;
+    padding: 25px;
+    font-size: 0.9em;
+}
