@@ -15,59 +15,127 @@
     </header>
 
     <!-- MENU COM LINKS INTERNOS -->
-    <nav>
+<nav>
     <a href="#adotar">🦴 Quero Adotar</a>
     <a href="#historia">📖 Nossa História</a>
     <a href="#ajudar">💛 Como Ajudar</a>
     <a href="#contato">📞 Contato</a>
-    <a href="#Fotos dos nossos amiguinhos">Amigos que já tiveram alta</a>
+    <a href="#mural">🐾 Mural de Resgatados</a>
 </nav>
-<!-- Nova Seção no index.html -->
+
+<!-- SEÇÃO DA GALERIA / MURAL DE RESGATADOS (SLIDER/CARROSSEL) -->
 <section id="mural">
-    <h2>Mural de Superação: Vidas Transformadas</h2>
-    <p>Conheça alguns dos nossos amigos que receberam cuidados e encontraram lares amorosos.</p>
+    <h2>Mural de Resgatados: Vidas Transformadas</h2>
+    <p>Conheça alguns dos nossos amigos protegidos que receberam cuidados e carinho da ONG.</p>
 
-    <!-- Container que vai organizar as fotos -->
-    <div class="galeria-fotos">
-        
-        <!-- Bloco de foto 1 (Exemplo) -->
-        <article class="foto-item">
-            <img src="" alt="Cachorro ajudado pela ONG - Foto 1">
-            <p>Um novo começo para este amigo.</p>
-        </article>
+    <!-- CONTAINER DO CARROSSEL -->
+    <div class="carrossel-container">
+        <!-- Botão Anterior -->
+        <button class="btn-carrossel prev" id="btn-prev">&#10094;</button>
 
-        <!-- Bloco de foto 2 -->
-        <article class="foto-item">
-            <img src="" alt="Cachorro ajudado pela ONG - Foto 2">
-            <p>Superação e alegria.</p>
-        </article>
+        <!-- Faixa Deslizante com as Fotos -->
+        <div class="carrossel-track-container">
+            <div class="carrossel-track">
+                <article class="foto-item"><img src="imagens/cat0.jpg" alt="Gatinho resgatado"><p>Amigo resgatado</p></article>
+                <article class="foto-item"><img src="imagens/fotoong1.png" alt="Cachorro resgatado"><p>Amigo resgatado</p></article>
+                <article class="foto-item"><img src="imagens/dog1.jpg" alt="Cachorro resgatado"><p>Amigo resgatado</p></article>
+                <article class="foto-item"><img src="imagens/dog2.jpg" alt="Cachorro resgatado"><p>Amigo resgatado</p></article>
+                <article class="foto-item"><img src="imagens/dog3.jpg" alt="Cachorro resgatado"><p>Amigo resgatado</p></article>
+                <article class="foto-item"><img src="imagens/dog4.jpg" alt="Cachorro resgatado"><p>Amigo resgatado</p></article>
+                <article class="foto-item"><img src="imagens/dog5.jpg" alt="Cachorro resgatado"><p>Amigo resgatado</p></article>
+                <article class="foto-item"><img src="imagens/dog6.jpg" alt="Cachorro resgatado"><p>Amigo resgatado</p></article>
+                <article class="foto-item"><img src="imagens/dog7.jpg" alt="Cachorro resgatado"><p>Amigo resgatado</p></article>
+                <article class="foto-item"><img src="imagens/dog8.jpg" alt="Cachorro resgatado"><p>Amigo resgatado</p></article>
+                <article class="foto-item"><img src="imagens/dog9.jpg" alt="Cachorro resgatado"><p>Amigo resgatado</p></article>
+                <article class="foto-item"><img src="imagens/dog10.jpg" alt="Cachorro resgatado"><p>Amigo resgatado</p></article>
+                <article class="foto-item"><img src="imagens/dog11.jpg" alt="Cachorro resgatado"><p>Amigo resgatado</p></article>
+                <article class="foto-item"><img src="imagens/dog12.jpg" alt="Cachorro resgatado"><p>Amigo resgatado</p></article>
+                <article class="foto-item"><img src="imagens/dog13.jpg" alt="Cachorro resgatado"><p>Amigo resgatado</p></article>
+                <article class="foto-item"><img src="imagens/dog14.jpg" alt="Cachorro resgatado"><p>Amigo resgatado</p></article>
+                <article class="foto-item"><img src="imagens/dog15.jpg" alt="Cachorro resgatado"><p>Amigo resgatado</p></article>
+                <article class="foto-item"><img src="imagens/dog16.jpg" alt="Cachorro resgatado"><p>Amigo resgatado</p></article>
+                <article class="foto-item"><img src="imagens/dog17.jpg" alt="Cachorro resgatado"><p>Amigo resgatado</p></article>
+            </div>
+        </div>
 
-        <!-- Bloco de foto 3 -->
-        <article class="foto-item">
-            <img src="" alt="Cachorro ajudado pela ONG - Foto 3">
-            <p>Pronto para um lar.</p>
-        </article>
-        
-        <!-- Adicione mais blocos como este para cada foto que quiser mostrar -->
-        <!-- Lembre-se de usar o nome correto do arquivo (jpg ou png) -->
-        <!-- <article class="foto-item">
-            <img src="imagens/dogX.jpg" alt="Nome do cachorro">
-            <p>Breve legenda.</p>
-        </article> -->
-
+        <!-- Botão Próximo -->
+        <button class="btn-carrossel next" id="btn-next">&#10095;</button>
     </div>
 </section>
-    <!-- SEÇÃO NORMAL: APRESENTAÇÃO -->
-    <section class="normal" id="adotar">
-        <h2>Quero Adotar</h2>
-        <p>
-            Adotar é um ato de amor e responsabilidade. Nossos cãezinhos resgatados passam por cuidados médicos, vacinação e vermifugação antes de estarem prontos para encontrar um novo lar.
-        </p>
-        <p>
-            Visite nossas feiras de adoção ou entre em contato com a equipe para conhecer os animais disponíveis.
-        </p>
-    </section>
 
+    <!-- SEÇÃO NORMAL: QUERO ADOTAR -->
+<section class="normal" id="adotar">
+    <h2>Quero Adotar</h2>
+    
+    <p>Adotar é um ato de amor e responsabilidade. Nossos cãezinhos e gatinhos resgatados passam por cuidados médicos, vacinação e vermifugação antes de estarem prontos para encontrar um novo lar.</p>
+
+    <p>Visite nossas feiras de adoção ou preencha nossa ficha de interesse para iniciarmos o processo!</p>
+
+    <!-- LINK/BOTÃO QUE LEVA ATÉ A FICHA DE ADOÇÃO -->
+    <div style="text-align: center; margin-top: 20px;">
+         <a href="#modal-adocao" class="btn-destaque">📋 Preencher Ficha de Interesse para Adoção</a>
+    </div>
+</section>
+<!-- ESTRUTURA DO MODAL (POP-UP) DA FICHA DE ADOÇÃO -->
+<div id="modal-adocao" class="modal-container">
+    <div class="modal-conteudo">
+        <!-- Botão para fechar o pop-up -->
+        <a href="#fechar" class="modal-fechar">&times;</a>
+        
+        <h2>Ficha de Interesse para Adoção</h2>
+        <p>Preencha os dados abaixo para que a nossa equipe possa analisar o seu perfil de adotante.</p>
+
+        <form action="processa_adocao.php" method="POST" class="form-adocao">
+            
+            <div class="campo-grupo">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+            </div>
+
+            <div class="campo-linha">
+                <div class="campo-grupo">
+                    <label for="idade">Idade:</label>
+                    <input type="number" id="idade" name="idade" min="18" max="100" placeholder="Ex: 25" required>
+                </div>
+
+                <div class="campo-grupo">
+                    <label for="cpf">CPF:</label>
+                    <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" required>
+                </div>
+            </div>
+
+            <div class="campo-linha">
+                <div class="campo-grupo">
+                    <label for="telefone">Telefone / WhatsApp:</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(32) 99999-9999" required>
+                </div>
+
+                <div class="campo-grupo">
+                    <label for="moradia">Tipo de Moradia:</label>
+                    <select id="moradia" name="moradia" required>
+                        <option value="" disabled selected>Selecione...</option>
+                        <option value="Casa com quintal fechado">Casa com quintal fechado</option>
+                        <option value="Casa sem quintal">Casa sem quintal</option>
+                        <option value="Apartamento">Apartamento</option>
+                        <option value="Sítio / Chácara">Sítio / Chácara</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="campo-grupo">
+                <label for="endereco">Endereço Completo:</label>
+                <input type="text" id="endereco" name="endereco" placeholder="Rua, número, bairro, cidade" required>
+            </div>
+
+            <div class="campo-grupo">
+                <label for="motivo">Por que você deseja adotar?</label>
+                <textarea id="motivo" name="motivo" rows="4" placeholder="Conte um pouco sobre sua rotina e por que deseja adotar..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-enviar">Enviar Ficha de Adoção</button>
+        </form>
+    </div>
+</div>
     <!-- FOTO DO CACHORRO FIXA NO FUNDO (EFEITO PARALLAX) -->
     <section class="imagem" id="img-mascote">
         <div>
@@ -76,16 +144,45 @@
         </div>
     </section>
 
+
     <!-- SEÇÃO NORMAL: HISTÓRIA DA ONG -->
-    <section class="normal" id="historia">
-        <h2>Nossa História</h2>
-        <p>
-            A ONG Amigos 4 Patas nasceu em São Tiago - MG com o propósito de combater o abandono e os maus-tratos animais.
-        </p>
-        <p>
-            Não somos um abrigo fechado; atuamos através de uma rede de lares temporários e voluntários dedicados a reabilitar cada cão resgatado até a sua adoção definitiva.
-        </p>
-    </section>
+<section class="normal" id="historia">
+    <h2>Nossa História</h2>
+    
+    <p>A história da <strong>Amigos 4 Patas</strong> começou em meados de 2019 e 2020, fruto da união de um grupo de protetores independentes de São Tiago. No início, éramos apenas voluntários fazendo o básico por conta própria, sem recursos estruturados, movidos unicamente pela compaixão e pela vontade de mudar a realidade dos animais abandonados e vítimas de maus-tratos em nossa cidade.</p>
+
+    <p>Com a dedicação constante desse grupo, organizamos toda a documentação necessária e formalizamos oficialmente a nossa ONG. Essa estruturação nos permitiu dar passos maiores: por volta de 2021 e 2022, firmamos uma parceria com a Prefeitura Municipal de São Tiago, passando a receber uma verba mensal que nos auxilia na manutenção dos cuidados básicos.</p>
+
+    <h3>Como funcionamos</h3>
+    <p>É importante destacar que <strong>não somos um abrigo permanente</strong>. Funcionamos em um espaço cedido pela prefeitura que atua como uma <strong>casa de passagem</strong>. Quando há vaga disponível, o animal em situação de rua ou risco é acolhido, passa por cuidados veterinários, é castrado, vacinado, vermifugado e preparado para encontrar um novo lar amoroso. Caso o animal seja reabilitado e não encontre uma família para adotá-lo, ele retorna de forma segura para o local de onde foi resgatado.</p>
+
+    <h3>Nossa Sustentabilidade</h3>
+    <p>Toda a nossa equipe é formada por voluntários que doam seu tempo livre pela causa animal. A verba municipal é um suporte essencial, mas cobre apenas uma parte dos nossos custos. A ONG sobrevive e mantém suas atividades ativas graças às <strong>doações da comunidade</strong>, <strong>ações e eventos</strong> e <strong>emendas parlamentares</strong> de deputados e vereadores parceiros.</p>
+</section>
+<!-- SEÇÃO DE IMPACTO / ESTATÍSTICAS DA ONG -->
+<section class="normal" id="impacto">
+    <h2>Nosso Impacto em Números</h2>
+    <p>Confira o resultado da união entre voluntários, doadores e a comunidade de São Tiago.</p>
+
+    <div class="cards-impacto">
+        <div class="card-numero">
+            <span class="numero-contador" data-alvo="150">+0</span>
+            <p>Animais Resgatados e Cuidados</p>
+        </div>
+
+        <div class="card-numero">
+            <span class="numero-contador" data-alvo="120">+0</span>
+            <p>Adoções Responsáveis Realizadas</p>
+        </div>
+
+        <div class="card-numero">
+            <span class="numero-contador" data-alvo="100" data-sufixo="">0%</span>
+            <p>Trabalho Voluntário e Comunitário</p>
+        </div>
+    </div>
+</section>
+
+
 
     <!-- SEGUNDO DESTAQUE DA FOTO OU OUTRO ÂNGULO -->
     <section class="imagem" id="img-frase">
@@ -139,7 +236,16 @@
         &copy; 2023 Amigos 4 Patas. Site desenvolvido para a ONG.
     </div>
 </footer>
+<!-- Conexão com o arquivo JavaScript -->
+    <script src="script.js"></script>
 
-<!-- Fecha o body e o html -->
+<!-- Conexão com os arquivos JavaScript -->
+    <script src="estilo/script.js"></script>
+    <script src="estilo/carrocel.js"></script>
+
 </body>
 </html>
+
+
+<!-- Fecha o body e o html -->
+

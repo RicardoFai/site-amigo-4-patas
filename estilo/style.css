@@ -71,9 +71,101 @@ nav a {
     transition: all 0.3s ease;
 }
 
+
 nav a:hover {
     background-color: var(--cor-secundaria);
     color: #ffffff;
+}
+
+/* ===================================================
+   ESTILOS DO CARROSSEL DE FOTOS DO MURAL
+   =================================================== */
+
+#mural {
+    padding: 40px 20px;
+    background-color: var(--cor-fundo);
+    text-align: center;
+}
+
+/* Estrutura principal do Carrossel */
+.carrossel-container {
+    position: relative;
+    max-width: 900px;
+    margin: 20px auto 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+/* Container com máscara que esconde os itens fora da tela */
+.carrossel-track-container {
+    overflow: hidden;
+    width: 100%;
+    border-radius: 12px;
+}
+
+/* Linha com todos os cards em sequência flexível */
+.carrossel-track {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.4s ease-in-out;
+}
+
+/* Tamanho de cada card de foto dentro do carrossel */
+.carrossel-track .foto-item {
+    min-width: calc(33.333% - 14px); /* Mostra 3 fotos por vez */
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+.carrossel-track .foto-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+/* Botões de navegação (< e >) */
+.btn-carrossel {
+    background-color: var(--cor-principal);
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    padding: 12px 16px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-carrossel:hover {
+    background-color: var(--cor-secundaria);
+    transform: scale(1.1);
+}
+
+.btn-carrossel.prev {
+    margin-right: 10px;
+}
+
+.btn-carrossel.next {
+    margin-left: 10px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .carrossel-track .foto-item {
+        min-width: calc(50% - 10px); /* Mostra 2 fotos em tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .carrossel-track .foto-item {
+        min-width: 100%; /* Mostra 1 foto por vez em celulares */
+    }
 }
 
 /* SEÇÕES DE TEXTO NORMAL */
@@ -140,4 +232,182 @@ footer {
     text-align: center;
     padding: 25px;
     font-size: 0.9em;
+}
+/* ===================================================
+   BOTÃO DE LINK E POP-UP (MODAL) DA FICHA DE ADOÇÃO
+   =================================================== */
+
+/* BOTÃO EM DESTAQUE */
+.btn-destaque {
+    display: inline-block;
+    background-color: var(--cor-secundaria);
+    color: #ffffff;
+    padding: 12px 24px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-destaque:hover {
+    background-color: var(--cor-principal);
+    transform: translateY(-2px);
+}
+
+/* POP-UP (MODAL) - ESCONDIDO POR PADRÃO */
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+}
+
+/* REVELA O POP-UP APENAS AO CLICAR NO BOTÃO */
+.modal-container:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* CAIXA BRANCA DO FORMULÁRIO */
+.modal-conteudo {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 650px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* BOTÃO DE FECHAR (X) */
+.modal-fechar {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #888;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.modal-fechar:hover {
+    color: #d9534f;
+}
+
+/* ESTILOS DOS CAMPOS DO FORMULÁRIO */
+.form-adocao {
+    margin-top: 15px;
+    text-align: left;
+}
+
+.campo-grupo {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.campo-linha {
+    display: flex;
+    gap: 15px;
+}
+
+.campo-linha .campo-grupo {
+    flex: 1;
+}
+
+.form-adocao label {
+    font-weight: bold;
+    color: var(--cor-texto);
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+.form-adocao input,
+.form-adocao select,
+.form-adocao textarea {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-family: var(--fonte1);
+}
+
+.btn-enviar {
+    background-color: var(--cor-principal);
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.btn-enviar:hover {
+    background-color: var(--cor-secundaria);
+}
+/* ESTILOS DA SEÇÃO DE IMPACTO DA ONG */
+
+#impacto {
+    text-align: center;
+    background-color: var(--cor-fundo);
+}
+
+.cards-impacto {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.card-numero {
+    background-color: #ffffff;
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    width: 250px;
+    transition: transform 0.3s ease;
+}
+
+.card-numero:hover {
+    transform: translateY(-5px);
+}
+
+.numero-contador {
+    font-family: var(--fonte2);
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--cor-principal);
+    display: block;
+    margin-bottom: 8px;
+}
+
+.card-numero p {
+    font-size: 1rem;
+    color: var(--cor-texto);
+    margin: 0;
+}
+
+/* Ajuste para telas pequenas */
+@media (max-width: 600px) {
+    .card-numero {
+        width: 100%;
+        max-width: 300px;
+    }
 }
